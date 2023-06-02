@@ -1,0 +1,201 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+:root{
+	--desaturated-red: hsl(0, 36%, 70%);
+	--soft-red: hsl(0, 93%, 68%);
+	--dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+@font-face {
+	font-family: Josefin;
+	src: url("fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+	font-weight: 100 1000;
+	font-dsplay: swap;
+}
+
+html{
+	font-size: 16px;
+	font-family: Josefin !important;	
+}
+
+
+
+.container {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url("images/bg-pattern-desktop.svg") no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff7f8;
+}
+
+.left {
+    flex: 1;
+    padding: 65px 165px;
+    box-sizing: border-box;
+}
+
+
+.right {
+    flex: 1.22;
+    box-sizing: border-box;
+    background: url("images/hero-desktop.jpg") no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.left h1 {
+    font-size: 4em;
+    margin-top: 132px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.27em;
+    color: var(--desaturated-red);
+}
+
+.left h2 {
+    margin-top: 1px;
+    font-size: 3.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    line-height: 1.14em;
+    color: var(--dark-grayish-red);
+}
+
+.left > p {
+    margin-top: 17px;
+    max-width: 431px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 28px;
+    letter-spacing: 0.002em;
+    font-size: 1.005em;
+    color: var(--desaturated-red);
+}
+
+.left input {
+    margin-top: 40px;
+    width: 91%;
+    height: 57px;
+    border-radius: 28px;
+    box-sizing: border-box;
+    padding-left: 32px;
+    font-size: 0.97em;
+    letter-spacing: 0.6px;
+    border: 1px solid #dacbce;
+}
+
+
+#subscribe {
+    position: relative;
+}
+
+#subscribe  button {
+    position: absolute;
+    right: 9%;
+    top: 40px;
+    border: none;
+    width: 101px;
+    height: 57px;
+    border-radius: 45px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+
+#subscribe button:hover{
+	background: hsla(358, 68%, 91%, 1);
+	background: linear-gradient(0deg, hsla(358, 68%, 91%, 1) 0%, hsla(358, 81%, 88%, 1) 100%);
+	background: -moz-linear-gradient(0deg, hsla(358, 68%, 91%, 1) 0%, hsla(358, 81%, 88%, 1) 100%);
+	background: -webkit-linear-gradient(0deg, hsla(358, 68%, 91%, 1) 0%, hsla(358, 81%, 88%, 1) 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F8DADB", endColorstr="#F9C7C9", GradientType=1 );
+	-webkit-box-shadow: 2px 16px 18px -2px rgba(233,191,191,0.71);
+	-moz-box-shadow: 2px 16px 18px -2px rgba(233,191,191,0.71);
+	box-shadow: 2px 16px 18px -2px rgba(233,191,191,0.71);
+}
+
+.hide{
+	display:none;
+}
+
+#subscribe input::placeholder{
+	color: #dacbce;
+}
+
+
+.warning-border-text-field{
+	border: 2px solid var(--soft-red) !important;
+}
+
+
+#subscribe > p {
+    margin-left: 32px;
+    margin-top: 10px;
+    font-size: 0.82em;
+    color: #fa6562;
+}
+
+#subscribe button .warning-icon {
+    box-sizing: border-box;
+    position: absolute;
+    left: -40px;
+}
+
+#subscribe input:focus{
+	outline: none;
+}

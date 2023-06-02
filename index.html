@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+
+
+<div class="container">
+    <main>
+      <section class="left">
+        <img src="images/logo.svg" alt="">
+        <h1>We're</h1>
+        <h2>coming soon</h2>
+        <p>  Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form id="subscribe">
+          <input id="email" class="" type="text" placeholder="Email Address">
+          <button type="submit"><img class="warning-icon hide" src="images/icon-error.svg" alt=""/><img src="images/icon-arrow.svg" alt=""></button>
+          <p class="hide">Please provide a valid email</p>
+        </form>
+      </section>
+
+      <section class="right"></section>
+    </main>
+</div>
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+      $('#subscribe').submit(function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var email = $('#email').val(); 
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+        if (emailRegex.test(email)) {
+          $('#subscribe').unbind('submit').submit();
+        } else {
+          $("#subscribe > input").addClass('warning-border-text-field');
+          $("#subscribe > p").removeClass('hide');
+          $("#subscribe > button .warning-icon").removeClass('hide');
+          $("#subscribe > button .warning-icon").addClass('animate__animated animate__headShake');
+        }
+      });
+    });
+  </script>
